@@ -3,9 +3,12 @@ import React, { useState } from 'react';
 import { Image, Text, TouchableOpacity, View } from 'react-native';
 import { COLORS, SIZES } from '../constants';
 import styles from './productDetails.styled';
+import { useRoute } from '@react-navigation/native';
 
 const ProductDetails = ({ navigation }) => {
   const [count, setCount] = useState(1);
+  const route = useRoute();
+  const { item } = route.params;
 
   const increment = () => {
     setCount(count + 1);
