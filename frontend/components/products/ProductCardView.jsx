@@ -5,7 +5,7 @@ import styles from './productCardView.styled';
 import { COLORS } from '../../constants';
 import { useNavigation } from '@react-navigation/native';
 
-const ProductCardView = () => {
+const ProductCardView = ({ item }) => {
   const navigation = useNavigation();
 
   return (
@@ -19,7 +19,7 @@ const ProductCardView = () => {
         </View>
 
         <View style={styles.details}>
-          <Text style={styles.title} numberOfLines={1}>Product</Text>
+          <Text style={styles.title} numberOfLines={1}>{item.title}</Text>
           <Text style={styles.supplier} numberOfLines={1}>Product</Text>
           <Text style={styles.price}>$1999</Text>
         </View>
