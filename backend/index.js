@@ -10,4 +10,7 @@ mongoose.connect(process.env.MONGO_URL).then(() => console.log("db connected")).
 
 app.use(express.json({ limit: '100mb' }));
 app.use(express.urlencoded({ limit: '10mb', extended: true }));
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+
+app.use('/api/products', productRouter);
+
+app.listen(process.env.PORT || port, () => console.log(`Example app listening on port ${process.env.PORT}!`));
