@@ -13,7 +13,7 @@ const Search = () => {
 
   const handleSearch = async () => {
     try {
-      const response = await axios.get(`http://192.168.137.1:3000/api/products/search/${searchKey}`);
+      const response = await axios.get(`http://192.168.121.6:3000/api/products/search/${searchKey}`);
       setSearchResults(response.data);
     } catch (error) {
       console.log('failed to fetch products', error);
