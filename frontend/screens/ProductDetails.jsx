@@ -32,15 +32,15 @@ const ProductDetails = ({ navigation }) => {
         </TouchableOpacity>
       </View>
       <Image
-        source={{ uri: "https://d326fntlu7tb1e.cloudfront.net/uploads/cb2e64a8-ad4c-4d45-b58b-b0c7e11b6bb4-fn1.jpg" }}
+        source={{ uri: item.imageUrl }}
         style={styles.img}
       />
 
       <View style={styles.details}>
         <View style={styles.titleRow}>
-          <Text style={styles.title}>Product</Text>
+          <Text style={styles.title}>{item.title}</Text>
           <View style={styles.priceWrapper}>
-            <Text style={styles.price}>$999.99</Text>
+            <Text style={styles.price}>#{item.price}</Text>
           </View>
         </View>
 
@@ -74,7 +74,7 @@ const ProductDetails = ({ navigation }) => {
         <View style={styles.descriptionWrapper}>
           <Text style={styles.description}>Description</Text>
           <Text style={styles.descText}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur sunt voluptatibus quo aliquid animi quisquam, molestiae reiciendis. Earum architecto, distinctio quaerat pariatur porro cumque laudantium amet assumenda possimus. Sapiente harum quae dignissimos officiis nam, autem deleniti debitis maiores ipsa at dicta, veniam, nulla architecto? Magnam tenetur iste earum cupiditate soluta.
+            {item.description}
           </Text>
         </View>
 
@@ -82,7 +82,7 @@ const ProductDetails = ({ navigation }) => {
           <View style={styles.location}>
             <View style={{ flexDirection: 'row', }}>
               <Ionicons name='location-outline' size={20} />
-              <Text>Ikoyi</Text>
+              <Text>{item.product_location}</Text>
             </View>
 
             <View style={{ flexDirection: 'row', }}>
