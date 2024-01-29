@@ -5,6 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { COLORS, SIZES } from '../constants';
 import styles from './search.styled';
 import axios from 'axios';
+import { SearchTile } from '../components';
 
 const Search = () => {
   const [searchKey, setSearchKey] = useState("");
@@ -52,7 +53,8 @@ const Search = () => {
         <FlatList
           data={searchResults}
           keyExtractor={(item) => item.id}
-          renderItem={({ item }) => (<Text>{item.title}</Text>)}
+          renderItem={({ item }) => (<SearchTile item={item} />)}
+          style={{ marginHorizontal: 12, }}
         />
       )}
     </SafeAreaView>

@@ -5,6 +5,7 @@ import ProductRow from "./products/ProductRow";
 import ProductCardView from "./products/ProductCardView";
 import ProductList from "./products/ProductList";
 import AnimatedTitle from "./products/AnimatedText";
+import SearchTile from "./products/SearchTile";
 
 export {
   Welcome,
@@ -14,4 +15,5 @@ export {
   ProductCardView,
   ProductList,
   AnimatedTitle,
+  SearchTile,
 };
