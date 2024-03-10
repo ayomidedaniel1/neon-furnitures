@@ -1,8 +1,8 @@
-# InventoryIO
+# neon-furnitures
 
-Mobile app built with React Native expo
+Mobile app built with React Native
 
-Neon furnitures is a mobile app that allows users to list, add, edit, and delete inventory items.
+Neon furnitures is a mobile app that displays different furnitures from different sellers
 
 ## Screenshots
 
